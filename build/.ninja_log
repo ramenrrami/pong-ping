@@ -1,12 +1,10 @@
 # ninja log v6
-59	139	7823323444077192	CMakeFiles/PongPing.dir/src/game.cpp.obj	5f0dfdacec7dcc1f
-65	142	7823323444139211	CMakeFiles/PongPing.dir/src/menu.cpp.obj	e60627addbb4d6e3
-19	53	7823324275789998	C:/Users/Savio/Desktop/PongPing/build/CMakeFiles/cmake.verify_globs	1770d7885aaa3957
-60	139	7823324276191987	CMakeFiles/PongPing.dir/src/main.cpp.obj	41a0026cf13b47b5
-57	230	7823324902658665	build.ninja	1cc14e2189ffc5fb
-156	290	7823320486506449	PongPing.exe	a09b4508ce754230
-16	49	7823324940497373	C:/Users/Savio/Desktop/PongPing/build/CMakeFiles/cmake.verify_globs	1770d7885aaa3957
 52	151	7823324940856754	CMakeFiles/PongPing.dir/src/game.cpp.obj	5f0dfdacec7dcc1f
-56	152	7823324940896981	CMakeFiles/PongPing.dir/src/main.cpp.obj	41a0026cf13b47b5
 59	405	7823324940928023	CMakeFiles/PongPing.dir/src/menu.cpp.obj	e60627addbb4d6e3
+16	49	7823324940497373	C:/Users/Savio/Desktop/PongPing/build/CMakeFiles/cmake.verify_globs	1770d7885aaa3957
+56	152	7823324940896981	CMakeFiles/PongPing.dir/src/main.cpp.obj	41a0026cf13b47b5
+57	230	7823349844537497	build.ninja	1cc14e2189ffc5fb
 406	548	7823324944400357	PongPing.exe	a09b4508ce754230
+16	55	7823349874666766	C:/Users/Savio/Desktop/PongPing/build/CMakeFiles/cmake.verify_globs	1770d7885aaa3957
+58	572	7823349875082603	CMakeFiles/PongPing.dir/src/main.cpp.obj	41a0026cf13b47b5
+573	858	7823349880170398	PongPing.exe	57338b3f933cb031

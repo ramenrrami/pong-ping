@@ -1,20 +1,8 @@
 [
 {
   "directory": "C:/Users/Savio/Desktop/PongPing/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -IC:/Users/Savio/Desktop/PongPing/include -IC:/Users/Savio/Desktop/PongPing/lib -std=gnu++17 -Wall -Wextra -pedantic -o CMakeFiles\\PongPing.dir\\src\\game.cpp.obj -c C:\\Users\\Savio\\Desktop\\PongPing\\src\\game.cpp",
-  "file": "C:\\Users\\Savio\\Desktop\\PongPing\\src\\game.cpp",
-  "output": "CMakeFiles\\PongPing.dir\\src\\game.cpp.obj"
-},
-{
-  "directory": "C:/Users/Savio/Desktop/PongPing/build",
   "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -IC:/Users/Savio/Desktop/PongPing/include -IC:/Users/Savio/Desktop/PongPing/lib -std=gnu++17 -Wall -Wextra -pedantic -o CMakeFiles\\PongPing.dir\\src\\main.cpp.obj -c C:\\Users\\Savio\\Desktop\\PongPing\\src\\main.cpp",
   "file": "C:\\Users\\Savio\\Desktop\\PongPing\\src\\main.cpp",
   "output": "CMakeFiles\\PongPing.dir\\src\\main.cpp.obj"
-},
-{
-  "directory": "C:/Users/Savio/Desktop/PongPing/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\c++.exe -IC:/Users/Savio/Desktop/PongPing/include -IC:/Users/Savio/Desktop/PongPing/lib -std=gnu++17 -Wall -Wextra -pedantic -o CMakeFiles\\PongPing.dir\\src\\menu.cpp.obj -c C:\\Users\\Savio\\Desktop\\PongPing\\src\\menu.cpp",
-  "file": "C:\\Users\\Savio\\Desktop\\PongPing\\src\\menu.cpp",
-  "output": "CMakeFiles\\PongPing.dir\\src\\menu.cpp.obj"
 }
 ]

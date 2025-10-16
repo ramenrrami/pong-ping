@@ -14,8 +14,6 @@ endif()
 # HDR_FILES at CMakeLists.txt:12 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/Savio/Desktop/PongPing/include/*.hpp")
 set(OLD_GLOB
-  "C:/Users/Savio/Desktop/PongPing/include/game.hpp"
-  "C:/Users/Savio/Desktop/PongPing/include/menu.hpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -25,9 +23,7 @@ endif()
 # SRC_FILES at CMakeLists.txt:9 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/Savio/Desktop/PongPing/src/*.cpp")
 set(OLD_GLOB
-  "C:/Users/Savio/Desktop/PongPing/src/game.cpp"
   "C:/Users/Savio/Desktop/PongPing/src/main.cpp"
-  "C:/Users/Savio/Desktop/PongPing/src/menu.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
