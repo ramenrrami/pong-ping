@@ -1,0 +1,22 @@
+Pong-Ping
+Author ramenrrami
+cont. Nexara
+
+To-Do
+	-Coding structure(.cpp + .hpp)
+		player.cpp (velocity & Acceleration) {Nexara (player velocity + acceleration & physic)}
+			(including) player.hpp
+		ball.cpp (ball logic, ball physic, velocity & acceleration) {mainly nexara}
+			(inlcuding) ball.hpp
+		boot.cpp (bootup screen & loading) {Nexara}
+			(including) bootup.hpp
+		menu.cpp (main menu & user input)
+			(including) menu.hpp
+		enemy.cpp (KI for single player campagne with difficulty levels 1-9) {Nexara (Ki for enemy. to follow the ball)}
+			(including) enemy.hpp
+			
+	info- für denn start erstmal bootup.cpp dann menu.cpp und mit einem klcik direkt in ne runde. der für alpha später (schöneres menu. levels und story mode + skins. später dann pdlc)
+	
+	-design (sprites etc.) {mainly ramenrrami}
+		logo.png (game logo for bootup.cpp)
+		backgrounds (main menu, ingame (scrolling animation = motion tile mirror effect))

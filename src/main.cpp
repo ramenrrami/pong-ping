@@ -1,22 +1,32 @@
 #include "raylib.h"
+#include "player.h"
 
-int main(){
+Player player;
+
+int main() {
     const int monitor = GetCurrentMonitor();
+    
+    const int screenWidth = 1920;
+    const int screenHeight = 1080;
 
-    const int screenwidth = GetMonitorWidth(monitor);
-    const int screenheight = GetMonitorHeight(monitor);
-
-    SetConfigFlags(FLAG_WINDOW_RESIZABLE);
-    InitWindow(screenwidth, screenheight, "Pong Ping");
+    InitWindow(screenWidth, screenHeight, "Pong Ping v1.0");
     SetTargetFPS(60);
 
-    MaximizeWindow();
+    int monitorWidth = GetMonitorWidth(monitor);
+    int monitorHeight = GetMonitorHeight(monitor);
 
-    while(!WindowShouldClose()){
+    int posX = (monitorWidth - screenWidth) / 2;
+    int posY = (monitorHeight - screenHeight) / 2;
+
+    SetWindowPosition(posX, posY);
+
+    while (!WindowShouldClose()) {
+        player.Update();
+
         BeginDrawing();
-        ClearBackground(RAYWHITE);
+        ClearBackground(LIGHTGRAY);
+        player.Draw();
         EndDrawing();
-        //== code ==//
     }
     CloseWindow();
     return 0;

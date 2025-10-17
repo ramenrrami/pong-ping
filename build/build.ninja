@@ -51,6 +51,13 @@ build CMakeFiles/PongPing.dir/src/main.cpp.obj: CXX_COMPILER__PongPing_unscanned
   OBJECT_DIR = CMakeFiles\PongPing.dir
   OBJECT_FILE_DIR = CMakeFiles\PongPing.dir\src
 
+build CMakeFiles/PongPing.dir/src/player.cpp.obj: CXX_COMPILER__PongPing_unscanned_ C$:/Users/Savio/Desktop/PongPing/src/player.cpp || cmake_object_order_depends_target_PongPing
+  DEP_FILE = CMakeFiles\PongPing.dir\src\player.cpp.obj.d
+  FLAGS = -std=gnu++17 -Wall -Wextra -pedantic
+  INCLUDES = -IC:/Users/Savio/Desktop/PongPing/include -IC:/Users/Savio/Desktop/PongPing/lib
+  OBJECT_DIR = CMakeFiles\PongPing.dir
+  OBJECT_FILE_DIR = CMakeFiles\PongPing.dir\src
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target PongPing
@@ -59,7 +66,7 @@ build CMakeFiles/PongPing.dir/src/main.cpp.obj: CXX_COMPILER__PongPing_unscanned
 #############################################
 # Link the executable PongPing.exe
 
-build PongPing.exe: CXX_EXECUTABLE_LINKER__PongPing_ CMakeFiles/PongPing.dir/src/main.cpp.obj | C$:/Users/Savio/Desktop/PongPing/lib/libraylib.a
+build PongPing.exe: CXX_EXECUTABLE_LINKER__PongPing_ CMakeFiles/PongPing.dir/src/main.cpp.obj CMakeFiles/PongPing.dir/src/player.cpp.obj | C$:/Users/Savio/Desktop/PongPing/lib/libraylib.a
   LINK_LIBRARIES = C:/Users/Savio/Desktop/PongPing/lib/libraylib.a  -lwinmm  -lgdi32  -lopengl32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\PongPing.dir
   POST_BUILD = cd .
