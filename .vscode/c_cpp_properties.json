@@ -4,8 +4,6 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${vcpkgRoot}/x64-mingw-dynamic/include",
-                "${vcpkgRoot}/x64-windows/include",
                 "${workspaceFolder}/lib",
                 "${workspaceFolder}/include"
 

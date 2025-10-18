@@ -20,3 +20,13 @@ To-Do
 	-design (sprites etc.) {mainly ramenrrami}
 		logo.png (game logo for bootup.cpp)
 		backgrounds (main menu, ingame (scrolling animation = motion tile mirror effect))
+		
+	modus
+	
+	Story mode
+	
+	Online-normal
+	
+	Rank-kamp (c-, S++)
+	
+	

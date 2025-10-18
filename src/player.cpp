@@ -1,10 +1,10 @@
 #include "player.h"
 
 Player::Player(){
-    position = { 175, GetScreenHeight() / 2.0f };
+    position = { 165, GetScreenHeight() / 2.0f };
     velocity = { 0.0f, 0.0f};
     acceleration = { 0.0f, 0.0f};
-    hitbox = { position.x, position.y, 55, 270 };
+    hitbox = { position.x, position.y, 45, 245 };
 
     //boost timeout system
     canBoost = true;
@@ -13,9 +13,9 @@ Player::Player(){
 }
 void Player::Update(){
     //defined noraml & boost acceleration || disable boost on time-out
-    float accelPower = 2.75f;
+    float accelPower = 2.00f;
     if (IsKeyPressed(KEY_LEFT_SHIFT) && canBoost){
-        accelPower = 65.0f;
+        accelPower = 58.0f;
         canBoost = false;
     }
     acceleration = {0.0f, 0.0f};
@@ -53,7 +53,7 @@ void Player::Update(){
 }
 
 void Player::Draw(){
-    DrawRectangleRec(hitbox, BLACK); 
+    DrawRectangleRec(hitbox, DARKGRAY); 
     DrawText(TextFormat("Boost ready: %s", canBoost ? "YES" : "NO"), 10, 10, 20, BLACK);
 
 }
