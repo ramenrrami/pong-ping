@@ -5,6 +5,9 @@ cmake_policy(SET CMP0009 NEW)
 # HDR_FILES at CMakeLists.txt:12 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/Savio/Desktop/PongPing/include/*.h")
 set(OLD_GLOB
+  "C:/Users/Savio/Desktop/PongPing/include/fontloader.h"
+  "C:/Users/Savio/Desktop/PongPing/include/fontmanager.h"
+  "C:/Users/Savio/Desktop/PongPing/include/fonts.h"
   "C:/Users/Savio/Desktop/PongPing/include/player.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
@@ -24,6 +27,8 @@ endif()
 # SRC_FILES at CMakeLists.txt:9 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/Users/Savio/Desktop/PongPing/src/*.cpp")
 set(OLD_GLOB
+  "C:/Users/Savio/Desktop/PongPing/src/fontloader.cpp"
+  "C:/Users/Savio/Desktop/PongPing/src/fontmanager.cpp"
   "C:/Users/Savio/Desktop/PongPing/src/main.cpp"
   "C:/Users/Savio/Desktop/PongPing/src/player.cpp"
   )

@@ -14,10 +14,13 @@ Player::Player(){
 void Player::Update(){
     //defined noraml & boost acceleration || disable boost on time-out
     float accelPower = 2.00f;
-    if (IsKeyPressed(KEY_LEFT_SHIFT) && canBoost){
-        accelPower = 58.0f;
+    if (IsKeyPressed(KEY_LEFT_SHIFT) && canBoost && (IsKeyDown(KEY_W) || IsKeyDown(KEY_S))){
+        accelPower = 50.0f;
         canBoost = false;
+    }else if (IsKeyPressed(KEY_LEFT_SHIFT) && canBoost && !IsKeyDown(KEY_W) && !IsKeyDown(KEY_S)) {
+
     }
+
     acceleration = {0.0f, 0.0f};
 
     //normal Keyinput
