@@ -21,12 +21,31 @@ To-Do
 		logo.png (game logo for bootup.cpp)
 		backgrounds (main menu, ingame (scrolling animation = motion tile mirror effect))
 		
-	modus
-	
-	Story mode
-	
-	Online-normal
-	
-	Rank-kamp (c-, S++)
-	
-	
+	-modes
+
+		story mode
+			normal story mode, where you have to fight CPU, from easy to extremely hard
+			(you can unlock badges, new abilities and skins); (you will also get a exclusive skin for completing the story mode to 100%)
+
+		online mode 
+			normal mode where you can fight against online player
+			(you can unlock there several badges and earn in game coin)
+
+		rank battle
+			online mode but just competetive, there will be ranks form (C- until S++)
+			(you can unlock several badge there and earn in game coins)
+
+		DLC (if making)
+			add-on for the story mode, like "side order" in splatoon 3
+			(you can unlock new exclusive badges and new skins)
+
+	-Menu options (except mode)
+
+		Equip
+			you can change your ability, skin here
+
+		Shop 
+			buy new Skins, color and exclusive shop abilities
+		
+		options
+			there you can change settings. like volume, you can also change your in game name there and other settings like disable GVX

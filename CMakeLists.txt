@@ -1,50 +1,50 @@
 cmake_minimum_required(VERSION 3.10)
-project(PongPing)
+project(PongPing CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-# === Quelldateien ===
-file(GLOB_RECURSE SRC_FILES CONFIGURE_DEPENDS
-    "${CMAKE_SOURCE_DIR}/src/*.cpp"
-)
-file(GLOB_RECURSE HDR_FILES CONFIGURE_DEPENDS
-    "${CMAKE_SOURCE_DIR}/include/*.h"
-    "${CMAKE_SOURCE_DIR}/include/*.hpp"
-)
-
-add_executable(${PROJECT_NAME} ${SRC_FILES} ${HDR_FILES})
-
-# === Raylib Setup ===
 set(RAYLIB_DIR "${CMAKE_SOURCE_DIR}/lib")
 
-# Include-Ordner (wo raylib.h liegt)
-target_include_directories(${PROJECT_NAME} PRIVATE
+# Executable hier anlegen – damit es global existiert
+add_executable(PongPing)
+
+target_include_directories(PongPing PRIVATE
     "${CMAKE_SOURCE_DIR}/include"
     "${RAYLIB_DIR}"
 )
-
-# === Raylib und Systembibliotheken ===
 if (WIN32)
-    target_link_libraries(${PROJECT_NAME}
-        "${RAYLIB_DIR}/libraylib.a"  # <-- direkter Pfad zur Datei
-        winmm
-        gdi32
-        opengl32
+    set(EXTRA_LIBS
+        "${RAYLIB_DIR}/libraylib.a"
+        winmm gdi32 opengl32
     )
 else()
-    target_link_libraries(${PROJECT_NAME}
+    set(EXTRA_LIBS
         "${RAYLIB_DIR}/libraylib.a"
-        m
-        pthread
-        dl
+        m pthread dl
     )
 endif()
 
-# === Compiler-Warnungen ===
+# Unterordner, die Dateien hinzufügen
+add_subdirectory(src)
+
+# Nachträgliche Einstellungen fürs Ziel
+target_link_libraries(PongPing PRIVATE ${EXTRA_LIBS})
+
+set_target_properties(PongPing PROPERTIES
+    VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
+)
+
+add_custom_command(TARGET PongPing POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:PongPing>/resources"
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    "${CMAKE_SOURCE_DIR}/resources" "$<TARGET_FILE_DIR:PongPing>/resources"
+)
+
+
 if (MSVC)
-    target_compile_options(${PROJECT_NAME} PRIVATE /W4)
+    target_compile_options(PongPing PRIVATE /W4)
 else()
-    target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -pedantic)
+    target_compile_options(PongPing PRIVATE -Wall -Wextra -pedantic)
 endif()
