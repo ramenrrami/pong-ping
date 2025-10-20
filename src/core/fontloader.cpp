@@ -1,7 +1,7 @@
 #include "fontloader.h"
 #include <iostream>
 
-Font FontLoader::font = { 0, 0, 0, {0}, nullptr, nullptr };
+Font FontLoader::font = {};
 bool FontLoader::loaded = false;
 
 void FontLoader::Load(const std::string& fontPath, int fontSize){
