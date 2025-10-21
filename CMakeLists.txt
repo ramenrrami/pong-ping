@@ -31,6 +31,19 @@ add_subdirectory(src)
 
 # Nachträgliche Einstellungen fürs Ziel
 target_link_libraries(PongPing PRIVATE ${EXTRA_LIBS})
+if(APPLE)
+    target_link_libraries(PongPing
+        PRIVATE
+        "-framework Cocoa"
+        "-framework IOKit"
+        "-framework CoreVideo"
+        "-framework CoreFoundation"
+        "-framework CoreGraphics"
+        "-framework CoreServices"
+        "-framework Foundation"
+        "-framework AppKit"
+    )
+endif()
 
 set_target_properties(PongPing PROPERTIES
     VS_DEBUGGER_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}"
