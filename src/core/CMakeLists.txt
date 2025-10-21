@@ -12,10 +12,6 @@ target_sources(${PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/fonts.h
     ${CMAKE_CURRENT_SOURCE_DIR}/game.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/game.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/renderer.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/renderer.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/scale.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/scale.h
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})

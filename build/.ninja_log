@@ -1,0 +1,8 @@
+# ninja log v6
+6	87	7827748006735703	CMakeFiles/PongPing.dir/src/core/camera.cpp.obj	625291d44e687210
+18	98	7827748006855268	CMakeFiles/PongPing.dir/src/core/game.cpp.obj	5ddae77ccbcff03c
+22	123	7827748006890635	CMakeFiles/PongPing.dir/src/gameplay/player.cpp.obj	a8414b0404202d5f
+11	348	7827748006770404	CMakeFiles/PongPing.dir/src/core/fontloader.cpp.obj	7dc847cb348c4982
+15	470	7827748006820226	CMakeFiles/PongPing.dir/src/core/fontmanager.cpp.obj	1bbdcc5034ffafd0
+24	1519	7827749535088385	CMakeFiles/PongPing.dir/src/main.cpp.obj	51f4d39d05632f91
+1519	2014	7827749550035488	PongPing.exe	5ab006e184d1dd1a

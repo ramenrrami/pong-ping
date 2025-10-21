@@ -1,7 +1,7 @@
 #include "player.h"
 
 Player::Player(){
-    position = { 165, GetScreenHeight() / 2.0f };
+    position = { 165, 1080 / 2.0f };
     velocity = { 0.0f, 0.0f};
     acceleration = { 0.0f, 0.0f};
     hitbox = { position.x, position.y, 45, 245 };
@@ -49,8 +49,8 @@ void Player::Update(){
         velocity.y = 0;
     }
 
-    if (position.y + hitbox.height > GetScreenHeight()){
-        position.y = GetScreenHeight() - hitbox.height;
+    if (position.y + hitbox.height > 1080 ){
+        position.y = 1080 - hitbox.height;
         velocity.y = 0;
     }
 }
