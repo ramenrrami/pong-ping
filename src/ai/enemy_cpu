@@ -1,0 +1,5 @@
+//#include "enemy.h"
+#include <algorithm>
+#include <cmath>
+
+//enemy AI-Levels 1-9; (1 = easiest CPU, 9 = Hard CPU)

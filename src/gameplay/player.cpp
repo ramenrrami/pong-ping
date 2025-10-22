@@ -1,7 +1,7 @@
 #include "player.h"
 
 Player::Player(){
-    position = { 165, GetScreenHeight() / 2.0f };
+    position = { 165, 1080 / 2.0f };
     velocity = { 0.0f, 0.0f};
     acceleration = { 0.0f, 0.0f};
     hitbox = { position.x, position.y, 45, 245 };
@@ -14,7 +14,7 @@ Player::Player(){
 void Player::Update(){
     //defined noraml & boost acceleration || disable boost on time-out
     float accelPower = 2.00f;
-    if (IsKeyPressed(KEY_LEFT_SHIFT) && canBoost && (IsKeyDown(KEY_W) || IsKeyDown(KEY_S))){
+    if (IsKeyPressed(KEY_LEFT_SHIFT) && canBoost && (IsKeyDown(KEY_W) || IsKeyDown(KEY_S) || IsKeyDown(KEY_UP) || IsKeyDown(KEY_DOWN))){
         accelPower = 50.0f;
         canBoost = false;
     }else if (IsKeyPressed(KEY_LEFT_SHIFT) && canBoost && !IsKeyDown(KEY_W) && !IsKeyDown(KEY_S)) {
@@ -26,6 +26,8 @@ void Player::Update(){
     //normal Keyinput
     if (IsKeyDown(KEY_W)) acceleration.y = -accelPower;
     if (IsKeyDown(KEY_S)) acceleration.y = accelPower;
+    if (IsKeyDown(KEY_UP)) acceleration.y = -accelPower;
+    if (IsKeyDown(KEY_DOWN)) acceleration.y = accelPower;
 
     velocity.y += acceleration.y;
     velocity.y *= 0.9f;
@@ -49,8 +51,8 @@ void Player::Update(){
         velocity.y = 0;
     }
 
-    if (position.y + hitbox.height > GetScreenHeight()){
-        position.y = GetScreenHeight() - hitbox.height;
+    if (position.y + hitbox.height > 1080 ){
+        position.y = 1080 - hitbox.height;
         velocity.y = 0;
     }
 }
